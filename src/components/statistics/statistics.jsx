@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Statistics = () => {
+const Statistics = ({ options }) => {
   return (
-    <>
-      <p>Good:</p>
-      <p>Neutral:</p>
-      <p>Bad:</p>
-    </>
+    <div>
+      {options.map(item => (
+        <p key={item}>{item}:</p>
+      ))}
+    </div>
   );
 };
 
